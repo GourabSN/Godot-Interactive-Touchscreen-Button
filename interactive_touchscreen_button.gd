@@ -50,6 +50,8 @@ func is_in(pos:Vector2) -> bool:
 
 
 func _input(event):
+	if disabled:
+		return
 	if event is InputEventScreenTouch :
 		if event.pressed and is_in(event.position) :
 			if released :
